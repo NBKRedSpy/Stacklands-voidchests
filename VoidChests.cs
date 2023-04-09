@@ -1,5 +1,5 @@
 using BepInEx;
-using BerryLoaderNS;
+using HarmonyLib;
 
 namespace VoidChests
 {
@@ -7,9 +7,24 @@ namespace VoidChests
     [BepInDependency("BerryLoader")]
     class Plugin : BaseUnityPlugin
     {
+        private readonly Harmony harmony = new(PluginInfo.PLUGIN_GUID);
         private void Awake()
         {
+            harmony.PatchAll();
+
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+        }
+    }
+
+    [HarmonyPatch(typeof(ResourceChest), nameof(ResourceChest.UpdateCard))]
+    public class ResourceChestPatch
+    {
+        public static void Postfix(ResourceChest __instance)
+        {
+            if (__instance.ResourceCount == __instance.MaxResourceCount)
+            {
+                __instance.ResourceCount--;
+            }
         }
     }
 }
