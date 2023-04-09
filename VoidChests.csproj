@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>YourMod</AssemblyName>
-    <Description>Your amazing mod!</Description>
-    <Version>1.0.0</Version>
+    <AssemblyName>VoidChests</AssemblyName>
+    <BepInExPluginGuid>me.bo0tzz.stacklands.voidchests</BepInExPluginGuid>
+    <Description>Resource chests delete excess items</Description>
+    <Version>0.0.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -12,32 +13,33 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
     <PackageReference Include="UnityEngine.Modules" Version="2020.3.6" IncludeAssets="compile" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BerryLoader">
-      <HintPath>$(stacklandsDir)/BepInEx/plugins/BerryLoader/BerryLoader.dll</HintPath>
+      <HintPath>lib/BerryLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GameScripts">
-      <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/GameScripts.dll</HintPath>
+      <HintPath>lib/GameScripts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SokLoc">
-      <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/SokLoc.dll</HintPath>
+      <HintPath>lib/SokLoc.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/Newtonsoft.Json.dll</HintPath>
+      <HintPath>lib/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>lib/Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/UnityEngine.UI.dll</HintPath>
+      <HintPath>lib/UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
