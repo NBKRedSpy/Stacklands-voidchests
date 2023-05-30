@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "bo0tzz"
 name = "VoidChests"
-versionNumber = "0.0.1"
+versionNumber = "0.0.2"
 description = "Resource chests delete excess items"
 websiteUrl = "https://github.com/bo0tzz/voidchests"
 containsNsfwContent = false

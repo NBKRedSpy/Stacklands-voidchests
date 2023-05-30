@@ -4,7 +4,6 @@ using HarmonyLib;
 namespace VoidChests
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-    [BepInDependency("BerryLoader")]
     class Plugin : BaseUnityPlugin
     {
         private readonly Harmony harmony = new(PluginInfo.PLUGIN_GUID);
