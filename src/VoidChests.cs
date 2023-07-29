@@ -1,17 +1,12 @@
-using BepInEx;
 using HarmonyLib;
 
 namespace VoidChests
 {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-    class Plugin : BaseUnityPlugin
+    class Plugin : Mod
     {
-        private readonly Harmony harmony = new(PluginInfo.PLUGIN_GUID);
-        private void Awake()
+		public override void Ready()
         {
-            harmony.PatchAll();
-
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            Harmony.PatchAll();
         }
     }
 

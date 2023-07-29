@@ -1,0 +1,7 @@
+﻿{
+    "name": "Void Chests",
+    "id": "VoidChests",
+    "version": "2.0.0",
+    "website_url": "https://github.com/NBKRedSpy/VoidChests",
+    "description": "Changes overflowing chests to remove cards instead of spilling out."
+}
