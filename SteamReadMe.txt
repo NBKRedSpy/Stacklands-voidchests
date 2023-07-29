@@ -8,4 +8,4 @@ This mod was originally created by bo0tzz and converted to Steam Workshop with p
 
 [h1]Source[/h1]
 
-https://github.com/NBKRedSpy/voidchests
+https://github.com/NBKRedSpy/Stacklands-voidchests
